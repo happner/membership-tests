@@ -19,7 +19,7 @@ describe('tests-remote', function () {
   var __knownRemotes = {};
 
   var CLUSTER_SIZE = 10;
-  var KNOWN_SEGMENT_SIZE = 2;
+  var KNOWN_SEGMENT_SIZE = 2; // first n processes are included in hostsToJoin list
 
   var dataLog = {};
 
