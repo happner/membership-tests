@@ -125,7 +125,6 @@ describe('tests-remote', function () {
         setTimeout(function () {
           console.log('verifying all notified of resumed %sth member', lastMember + 1);
 
-          // list of members notified of last member's return
           var notifiedOfReturned = [];
 
           for (var i = 0; i < CLUSTER_SIZE; i++) {
