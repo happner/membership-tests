@@ -1,0 +1,28 @@
+{
+  "name": "membership-tests",
+  "description": "testing cluster membeship",
+  "version": "0.0.0",
+  "scripts": {},
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "swim",
+    "membership",
+    "cluster"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/happner/happn.git"
+  },
+  "dependencies": {
+    "async": "^2.0.1",
+    "swim": "^0.3.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "debug": "^2.2.0",
+    "expect.js": "*",
+    "mocha": "*"
+  },
+  "readmeFilename": "README.md"
+}
