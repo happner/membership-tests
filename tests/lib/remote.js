@@ -62,7 +62,7 @@ swim.bootstrap(hostsToJoin, function onBootstrap(err) {
     console.log('UPDATE:::' + id + ':::' + JSON.stringify(update));
   });
 
-  console.log('READY:::' + id + ':::NONE');
+  console.log('READY:::' + id + ':::{}');
 
   // shutdown
   //swim.leave();

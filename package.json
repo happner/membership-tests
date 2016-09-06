@@ -2,7 +2,9 @@
   "name": "membership-tests",
   "description": "testing cluster membeship",
   "version": "0.0.0",
-  "scripts": {},
+  "scripts": {
+    "test": "mocha tests/*.js"
+  },
   "author": "",
   "license": "MIT",
   "keywords": [
