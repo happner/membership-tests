@@ -15,7 +15,8 @@ var Swim = require('swim');
 var opts = {
   local: {
     host: '127.0.0.1:' + PORT,
-    meta: {'id': id} // optional
+    meta: {'id': id}, // optional,
+    incarnation:Date.now()
   },
   codec: 'msgpack', // optional
   disseminationFactor: 15, // optional
