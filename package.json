@@ -19,6 +19,7 @@
   "dependencies": {
     "async": "^2.0.1",
     "deepcopy": "^0.6.3",
+    "dotenv": "^2.0.0",
     "happner": "^1.19.3",
     "swim": "^0.3.0"
   },
