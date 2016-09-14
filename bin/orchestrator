@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+// start 1 bin/orchestrator accessable to all bin/member s
+// (after setting up .env)
+
+var config = require('../config/orchestrator');
+var Happner = require('happner');
+
+Happner.create(config).catch(function(error) {
+  console.error(error.stack);
+  process.exit(1);
+});

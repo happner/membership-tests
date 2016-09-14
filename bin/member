@@ -1,0 +1,24 @@
+#!/usr/bin/env node
+
+// start 1 bin/member per desired number of swimmers on each node
+// (after starting orchestrator and setting up .env)
+
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
+require('dotenv').config({file: __dirname + '/../.env'});
+
+var Happner = require('happner');
+var member = require('../lib/member');
+
+var orchestrator = new Happner.MeshClient({
+  hostname: process.env.ORCHESTRATOR_HOST,
+  port: process.env.ORCHESTRATOR_PORT,
+  protocol: 'https'
+});
+
+orchestrator.login({
+  username: '_ADMIN',
+  password: process.env.ORCHESTRATOR_PASSWORD
+}).then(member.run(orchestrator)).catch(function(error) {
+  console.error(error.stack);
+  process.exit(1);
+});

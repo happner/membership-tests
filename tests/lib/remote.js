@@ -30,7 +30,7 @@ var opts = {
 //
 // var opts = {
 //   local: {
-//     host: '127.0.0.1:' + PORT,
+//     member: '127.0.0.1:' + PORT,
 //     meta: {'id': id} // optional
 //   },
 //   codec: 'msgpack', // optional
