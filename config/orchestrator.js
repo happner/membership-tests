@@ -18,7 +18,7 @@ module.exports = {
       certPath: __dirname + '/example.com.cert'
     },
     setOptions: {
-      timeout: 30000
+      timeout: 60000
     }
   },
 

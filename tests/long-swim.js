@@ -43,7 +43,7 @@ describe('distributed swim test', function() {
   });
 
   before('clear previous cluster', function(done) {
-    this.timeout(10000);
+    this.timeout(100000);
     orchestrator.exchange.swimmers.stopCluster()
       .then(function() {
         done();
@@ -105,7 +105,7 @@ describe('distributed swim test', function() {
   });
 
   after('stop cluster', function(done) {
-    this.timeout(10000);
+    this.timeout(100000);
     orchestrator.exchange.swimmers.stopCluster()
       .then(function() {
         done();
