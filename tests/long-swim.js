@@ -16,7 +16,7 @@ var orchestrator;
 var stopWaiting = {};
 var startWaiting = {};
 var swimopts = {
-
+  // departWait: 100
 };
 
 describe('distributed swim test', function() {
@@ -113,7 +113,7 @@ describe('distributed swim test', function() {
       .catch(done);
   });
 
-  it('repeat stop and start random swimmer confirming full replication of state changes', function(done) {
+  it.only('repeat stop and start random swimmer confirming full replication of state changes', function(done) {
     this.timeout(0);
 
     var iteration = 0;
