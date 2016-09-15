@@ -16,6 +16,9 @@ module.exports = {
       mode: 'https',
       keyPath: __dirname + '/example.com.key',
       certPath: __dirname + '/example.com.cert'
+    },
+    setOptions: {
+      timeout: 30000
     }
   },
 
