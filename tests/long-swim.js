@@ -117,7 +117,7 @@ describe('distributed swim test', function() {
     this.timeout(0);
 
     var iteration = 0;
-    var iterations = 10000;
+    var iterations = 1000;
     var start = Date.now();
 
     function setDepartures(target, swimmers) {
