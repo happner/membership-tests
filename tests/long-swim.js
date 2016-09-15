@@ -241,10 +241,10 @@ describe('distributed swim test', function() {
 
   });
 
-  it('endlessly watches for reconnections', function(done) {
-    console.log();
-    orchestrator.log.info('----> starting endless wait for stray reconnects');
-    this.timeout(0);
-  });
+  // it('endlessly watches for reconnections', function(done) {
+  //   console.log();
+  //   orchestrator.log.info('----> starting endless wait for stray reconnects');
+  //   this.timeout(0);
+  // });
 
 });
