@@ -41,6 +41,7 @@ describe('distributed swim test', function() {
 
       .then(function() {
         orchestrator.event.swimmers.on('cluster/log', function(data) {
+          data.args[0] = 'LOG ' + data.args[0];
           orchestrator.log[data.level || 'info'].apply(orchestrator.log, data.args);
         });
         done();
