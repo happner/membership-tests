@@ -16,7 +16,13 @@ var orchestrator;
 var stopWaiting = {};
 var startWaiting = {};
 var swimopts = {
-  // departWait: 100
+  // departWait: 100,
+
+  joinTimeout: 2000,
+  interval: 2000,
+  pingTimeout: 2000,
+  pingReqTimeout: 4000
+
 };
 
 describe('distributed swim test', function() {
@@ -139,6 +145,7 @@ describe('distributed swim test', function() {
 
     function stopSwimmer(target) {
       return new Promise(function(resolve, reject) {
+        orchestrator.log.info('----> stopping %s', target);
         orchestrator.exchange.swimmers.stopSwimmer(target)
           .then(function() {
             var interval = setInterval(function() {
@@ -180,6 +187,7 @@ describe('distributed swim test', function() {
 
     function startSwimmer(target) {
       return new Promise(function(resolve, reject) {
+        orchestrator.log.info('----> starting %s', target);
         orchestrator.exchange.swimmers.startSwimmer(target, null)
           .then(function() {
             var interval = setInterval(function() {
