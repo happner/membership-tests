@@ -162,7 +162,7 @@ describe('distributed swim test', function() {
             }, 100);
           })
           .catch(function(error){
-            console.error('stopSwimmer ' + target, error.stack);
+            console.log('stopSwimmer ' + target, error.stack);
             reject(error);
           });
       });
@@ -204,7 +204,7 @@ describe('distributed swim test', function() {
             }, 100);
           })
           .catch(function(error) {
-            console.error('startSwimmer ' + target, error.stack);
+            console.log('startSwimmer ' + target, error.stack);
             reject(error);
           });
       });
